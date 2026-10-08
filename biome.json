@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "includes": ["**", "!**/node_modules", "!**/dist", "!**/drizzle"]
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "rules": {
+      "preset": "recommended",
+      "suspicious": { "noExplicitAny": "error" },
+      "style": { "useImportType": "error", "noNonNullAssertion": "warn" }
+    }
+  },
+  "javascript": {
+    "formatter": { "quoteStyle": "double", "semicolons": "always" }
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } }
+}
